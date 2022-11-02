@@ -1,7 +1,7 @@
 # Blocks
 
 ## Equations
-
+here is
 Here is an equation.
 
 \begin{equation} 
