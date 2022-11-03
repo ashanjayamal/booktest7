@@ -1,6 +1,6 @@
 --- 
-title: "Little BUnny"
-author: "cheese kalla"
+title: "Introduction to Mathematics of Cryptogrphy"
+author: "Ashan Jayamal"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -15,11 +15,23 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
 
-# About
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
 
-## Usage 
+# Introduction
+In this book you can basic idea about the role of mathematics behind the Cryptography. Let's start our journey with the history as every story
+
+## What is cryptogrphy
+There is such an exact definition for the cryptography. 
+
+> Cryptography, or cryptology is the practice and study of techniques for secure communication in the presence of adversarial behavior. 
+> - Wikipeida 
+
+> Cryptography is technique of securing information and communications through use of codes so that only those person for whom the information is intended can understand it and process it. 
+> -GeeksforGeeks Website
+
+Thus we can conclude that __Cryptography is the study of secure communications techniques that allow only the sender and receiver  to view its contents ( third party can not understand the message.__
+
+## History 
 
 Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
 
