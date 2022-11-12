@@ -242,6 +242,106 @@ What about adversaries?
 
 The Diffie-Helamn (DH) Algorithm is a key exchange protocol. It is a method of securely exchanging cryptographic keys over a public channel. The DH algorithm enable two parties that have no prior knowledge of each other to jointly establish a shared secret key over an insecure public channel. This established key can be used to symmetric-key algorithms for future communication. Since symmetric key algorithms are more efficient than asymmetric keys algorithms, the DH key exchange method is very useful.
 
+\hypertarget{think}{%
+\section*{! Think}\label{think}}
+\addcontentsline{toc}{section}{! Think}
+
+Alice and Bob needs to filp a coin. But they can not be at the same place. They can do it with telephone. But both of them do not trust other party.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  How do they flip a coin over the phone?
+\item
+  How do they grantee that other one is not cheating?
+\end{enumerate}
+
+They can come up with a following kind of protocol. This method is called ``General Coin Flipping Over Telephone''. \textbf{Steps}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Define a function \(f:\mathbb{Z}\rightarrow \mathbb{Z}\) with the following properties.
+  \emph{For every integer x, it is easy to compute f(x) from x, while given any value f(x) it is impossible (hard) to find any information about a pre-image x, e.g., whether x is an odd or even number.}
+\item
+  Then Alice and Bob agrees on
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  A function \(f:\mathbb{Z}\rightarrow \mathbb{Z}\) with properties as specified
+\item
+  An even number (\(x\) or \(f(x)\)) represents HEADS and an odd number represents TAILS with properties as specified.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Coin Tossing
+  Alice: Picks a large random integer \(x\) and computes \(f(x)\), she reads \(f(x)\) to Bob over the phone;
+  Bob : Tells Alice, his guess of \(x\) as even or odd.
+  Alice: Reads \(x\) to bob;
+  Bob : Verifies \(f(x)\) and sees the correctness/incorrectness of his guess.
+\end{enumerate}
+
+1)?
+2)?
+
+\hypertarget{steps-edit-it-correctly}{%
+\section{Steps (Edit it correctly)}\label{steps-edit-it-correctly}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Choose \(G\)lobal \(P\)arameters.
+  \(P\) is \(P\)rime number
+  \(G\) is \(P\)rime number such that \(G\) \textless{} \(P\)
+\item
+  \(P\)rivate key \(G\)eneration
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \(P\)erson 1 and 2 choose their \(P\)rivate key.
+  \(P\)erson 1 \(P\)rivate key : a (a \textless{} \(P\))
+  \(P\)erson 2 \(P\)rivate key : b (b \textless{} \(P\))
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \(P\)ublic key \(G\)eneration.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Then they calculate \(P\)ublic key as follows,
+  \(P\)erson 1 : A = \(G\)
+  a(mod \(P\))
+  \(P\)erson 2 : B = \(G\)
+  b (mod \(P\))
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Then they exchan\(G\)e their \(P\)rivate key.
+\item
+  Calculatin\(G\) secret key.
+  \(P\)erson 1 secret key : s = B a (mod \(P\))
+\end{enumerate}
+
 \hypertarget{cross}{%
 \chapter{Cross-references}\label{cross}}
 

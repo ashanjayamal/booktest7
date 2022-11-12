@@ -1,7 +1,52 @@
 # Deffie-Helman Algorithm (Diffe-Helamn Key Distribution Algorithm)
+
 The Diffie-Helamn (DH) Algorithm is a key exchange protocol. It is a method of securely exchanging cryptographic keys over a public channel. The DH algorithm enable two parties that have no prior knowledge of each other to jointly establish a shared secret key over an insecure public channel. This established key can be used to symmetric-key algorithms for future communication. Since symmetric key algorithms are more efficient than asymmetric keys algorithms, the DH key exchange method is very useful.
 
+## ! Think {.unnumbered}
+
+Alice and Bob needs to filp a coin. But they can not be at the same place. They can do it with telephone. But both of them do not trust other party.
+
+1.  How do they flip a coin over the phone?
+
+2.  How do they grantee that other one is not cheating?
+
+They can come up with a following kind of protocol. This method is called "General Coin Flipping Over Telephone". **Steps**
+
+1. Define a function $f:\mathbb{Z}\rightarrow \mathbb{Z}$ with the following properties. 
+*For every integer x, it is easy to compute f(x) from x, while given any value f(x) it is impossible (hard) to find any information about a pre-image x, e.g., whether x is an odd or even number.*
+2. Then Alice and Bob agrees on 
+* A function $f:\mathbb{Z}\rightarrow \mathbb{Z}$  with properties as specified
+* An even number ($x$ or $f(x)$) represents HEADS and an odd number represents TAILS with properties as specified.
+3. Coin Tossing
+Alice: Picks a large random integer $x$ and computes $f(x)$, she reads $f(x)$ to Bob over the phone;
+Bob  : Tells Alice, his guess of $x$ as even or odd.
+Alice: Reads $x$ to bob; 
+Bob  : Verifies $f(x)$ and sees the correctness/incorrectness of his guess.
+
+1)?
+2)?
+
+
+## Steps (Edit it correctly)
+1. Choose $G$lobal $P$arameters.
+$P$ is $P$rime number
+$G$ is $P$rime number such that $G$ < $P$
+2. $P$rivate key $G$eneration
+* $P$erson 1 and 2 choose their $P$rivate key.
+$P$erson 1 $P$rivate key : a (a < $P$) 
+$P$erson 2 $P$rivate key : b (b < $P$) 
+3. $P$ublic key $G$eneration.
+* Then they calculate $P$ublic key as follows,
+$P$erson 1 : A = $G$
+a(mod $P$) 
+$P$erson 2 : B = $G$
+b (mod $P$) 
+4. Then they exchan$G$e their $P$rivate key.
+5. Calculatin$G$ secret key.
+$P$erson 1 secret key : s = B a (mod $P$) 
 
 
 
+
+  
 

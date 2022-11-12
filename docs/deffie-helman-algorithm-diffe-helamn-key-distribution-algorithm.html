@@ -174,7 +174,11 @@ div.csl-indent {
 <li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#how-can-we-achieve-any-of-these-goals"><i class="fa fa-check"></i><b>1.6</b> How can we achieve any of these goals?</a></li>
 <li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#example"><i class="fa fa-check"></i><b>1.7</b> Example</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm.html"><a href="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm.html"><i class="fa fa-check"></i><b>2</b> Deffie-Helman Algorithm (Diffe-Helamn Key Distribution Algorithm)</a></li>
+<li class="chapter" data-level="2" data-path="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm.html"><a href="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm.html"><i class="fa fa-check"></i><b>2</b> Deffie-Helman Algorithm (Diffe-Helamn Key Distribution Algorithm)</a>
+<ul>
+<li class="chapter" data-level="" data-path="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm.html"><a href="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm.html#think"><i class="fa fa-check"></i>! Think</a></li>
+<li class="chapter" data-level="2.1" data-path="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm.html"><a href="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm.html#steps-edit-it-correctly"><i class="fa fa-check"></i><b>2.1</b> Steps (Edit it correctly)</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
@@ -218,7 +222,63 @@ div.csl-indent {
 <div id="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Deffie-Helman Algorithm (Diffe-Helamn Key Distribution Algorithm)<a href="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm.html#deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The Diffie-Helamn (DH) Algorithm is a key exchange protocol. It is a method of securely exchanging cryptographic keys over a public channel. The DH algorithm enable two parties that have no prior knowledge of each other to jointly establish a shared secret key over an insecure public channel. This established key can be used to symmetric-key algorithms for future communication. Since symmetric key algorithms are more efficient than asymmetric keys algorithms, the DH key exchange method is very useful.</p>
+<div id="think" class="section level2 unnumbered hasAnchor">
+<h2>! Think<a href="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm.html#think" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Alice and Bob needs to filp a coin. But they can not be at the same place. They can do it with telephone. But both of them do not trust other party.</p>
+<ol style="list-style-type: decimal">
+<li><p>How do they flip a coin over the phone?</p></li>
+<li><p>How do they grantee that other one is not cheating?</p></li>
+</ol>
+<p>They can come up with a following kind of protocol. This method is called “General Coin Flipping Over Telephone”. <strong>Steps</strong></p>
+<ol style="list-style-type: decimal">
+<li>Define a function <span class="math inline">\(f:\mathbb{Z}\rightarrow \mathbb{Z}\)</span> with the following properties.
+<em>For every integer x, it is easy to compute f(x) from x, while given any value f(x) it is impossible (hard) to find any information about a pre-image x, e.g., whether x is an odd or even number.</em></li>
+<li>Then Alice and Bob agrees on</li>
+</ol>
+<ul>
+<li>A function <span class="math inline">\(f:\mathbb{Z}\rightarrow \mathbb{Z}\)</span> with properties as specified</li>
+<li>An even number (<span class="math inline">\(x\)</span> or <span class="math inline">\(f(x)\)</span>) represents HEADS and an odd number represents TAILS with properties as specified.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Coin Tossing
+Alice: Picks a large random integer <span class="math inline">\(x\)</span> and computes <span class="math inline">\(f(x)\)</span>, she reads <span class="math inline">\(f(x)\)</span> to Bob over the phone;
+Bob : Tells Alice, his guess of <span class="math inline">\(x\)</span> as even or odd.
+Alice: Reads <span class="math inline">\(x\)</span> to bob;
+Bob : Verifies <span class="math inline">\(f(x)\)</span> and sees the correctness/incorrectness of his guess.</li>
+</ol>
+<p>1)?
+2)?</p>
+</div>
+<div id="steps-edit-it-correctly" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Steps (Edit it correctly)<a href="deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm.html#steps-edit-it-correctly" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Choose <span class="math inline">\(G\)</span>lobal <span class="math inline">\(P\)</span>arameters.
+<span class="math inline">\(P\)</span> is <span class="math inline">\(P\)</span>rime number
+<span class="math inline">\(G\)</span> is <span class="math inline">\(P\)</span>rime number such that <span class="math inline">\(G\)</span> &lt; <span class="math inline">\(P\)</span></li>
+<li><span class="math inline">\(P\)</span>rivate key <span class="math inline">\(G\)</span>eneration</li>
+</ol>
+<ul>
+<li><span class="math inline">\(P\)</span>erson 1 and 2 choose their <span class="math inline">\(P\)</span>rivate key.
+<span class="math inline">\(P\)</span>erson 1 <span class="math inline">\(P\)</span>rivate key : a (a &lt; <span class="math inline">\(P\)</span>)
+<span class="math inline">\(P\)</span>erson 2 <span class="math inline">\(P\)</span>rivate key : b (b &lt; <span class="math inline">\(P\)</span>)</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><span class="math inline">\(P\)</span>ublic key <span class="math inline">\(G\)</span>eneration.</li>
+</ol>
+<ul>
+<li>Then they calculate <span class="math inline">\(P\)</span>ublic key as follows,
+<span class="math inline">\(P\)</span>erson 1 : A = <span class="math inline">\(G\)</span>
+a(mod <span class="math inline">\(P\)</span>)
+<span class="math inline">\(P\)</span>erson 2 : B = <span class="math inline">\(G\)</span>
+b (mod <span class="math inline">\(P\)</span>)</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Then they exchan<span class="math inline">\(G\)</span>e their <span class="math inline">\(P\)</span>rivate key.</li>
+<li>Calculatin<span class="math inline">\(G\)</span> secret key.
+<span class="math inline">\(P\)</span>erson 1 secret key : s = B a (mod <span class="math inline">\(P\)</span>)</li>
+</ol>
 
+</div>
 </div>
             </section>
 
