@@ -117,25 +117,8 @@
 
 \title{Introduction to Mathematics of Cryptogrphy}
 \author{Ashan Jayamal}
-\date{2022-11-03}
+\date{2022-11-12}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{definition}
-\newtheorem{hypothesis}{Hypothesis}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -168,62 +151,96 @@ Thus we can conclude that \textbf{Cryptography is the study of secure communicat
 \hypertarget{history}{%
 \section{History}\label{history}}
 
-Each \textbf{bookdown} chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter \emph{must} start with a first-level heading: \texttt{\#\ A\ good\ chapter}, and can contain one (and only one) first-level heading.
+First evidence of cryptography found in the Egypt. An artist pa
 
-Use second-level and higher headings within chapters like: \texttt{\#\#\ A\ short\ section} or \texttt{\#\#\#\ An\ even\ shorter\ section}.
+\hypertarget{sherlock-holmes-and-the-adventure-of-the-dancing-men}{%
+\section{Sherlock Holmes and the Adventure of the Dancing Men}\label{sherlock-holmes-and-the-adventure-of-the-dancing-men}}
 
-The \texttt{index.Rmd} file is required, and is also your first book chapter. It will be the homepage when you render the book.
+The adventure of dancing men is one of the story of the ``The Return of Sherlock Holmes'' by Sir Arthur Conan Doyle. In that story Mr.~Sherlock Holmes had to break a cipher.
 
-\hypertarget{render-book}{%
-\section{Render book}\label{render-book}}
+\emph{``Holmes held up the paper so that the sunlight shone full upon it. It was a page torn from a note book. The markings were done in pencil, and ran in this way'':}
 
-You can render the HTML version of this example book without changing anything:
+\hypertarget{some-key-ideas}{%
+\section{Some Key Ideas}\label{some-key-ideas}}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
+\begin{itemize}
+\tightlist
 \item
-  Find the \textbf{Build} pane in the RStudio IDE, and
+  Privacy: Keep information secret
 \item
-  Click on \textbf{Build Book}, then select your output format, or select ``All formats'' if you'd like to use multiple formats from the same book source files.
-\end{enumerate}
+  Data Integrity: Data had been not changed
+\item
+  Authentication/Identification
 
-Or build the book from the R console:
+  \begin{itemize}
+  \tightlist
+  \item
+    Person
+  \item
+    Message
+  \end{itemize}
+\item
+  Signature
+\item
+  Authorization
+\item
+  Validation
+\item
+  Access control
+\item
+  Non-repudiation
+\end{itemize}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{render\_book}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{cryptographic-goals}{%
+\section{Cryptographic Goals}\label{cryptographic-goals}}
 
-To render this example to PDF as a \texttt{bookdown::pdf\_book}, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
+\begin{itemize}
+\tightlist
+\item
+  Confidentiality (privacy)
+\item
+  Data Integrity (prevent unauthorized alteration of data
+\item
+  Authentication
+\item
+  Non-repudiation
+\end{itemize}
 
-\hypertarget{preview-book}{%
-\section{Preview book}\label{preview-book}}
+\hypertarget{how-can-we-achieve-any-of-these-goals}{%
+\section{How can we achieve any of these goals?}\label{how-can-we-achieve-any-of-these-goals}}
 
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in ``Preview book'', or from the R console:
+Consider sending a confidential message
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{serve\_book}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
+\begin{itemize}
+\tightlist
+\item
+  What features do we need?
+\item
+  What challenges and what limitations do we have?
+\end{itemize}
 
-\hypertarget{hi-little-bunny}{%
-\chapter{Hi little BUnny}\label{hi-little-bunny}}
+\hypertarget{example}{%
+\section{Example}\label{example}}
 
-why is ithis lkjlk lkjj
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
+Consider choosing a secret alphabet.
 
-\hypertarget{a-section}{%
-\section{A section}\label{a-section}}
+\begin{figure}
+\centering
+\includegraphics{https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Pigpen_cipher_key.svg/330px-Pigpen_cipher_key.svg.png}
+\caption{Pigpen Cipher}
+\end{figure}
 
-All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+Express your name using this.
+Decode the following message.
+\includegraphics{https://drive.google.com/file/d/1tJFhiDIVIvr1QFmYxrsQOm-YYlprO-sq/view?usp=share_link}
 
-\hypertarget{an-unnumbered-section}{%
-\subsection*{An unnumbered section}\label{an-unnumbered-section}}
-\addcontentsline{toc}{subsection}{An unnumbered section}
+Advantages/Disadvantages?
+What about adversaries?
 
-Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
+\hypertarget{deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm}{%
+\chapter{Deffie-Helman Algorithm (Diffe-Helamn Key Distribution Algorithm)}\label{deffie-helman-algorithm-diffe-helamn-key-distribution-algorithm}}
+
+The Diffie-Helamn (DH) Algorithm is a key exchange protocol. It is a method of securely exchanging cryptographic keys over a public channel. The DH algorithm enable two parties that have no prior knowledge of each other to jointly establish a shared secret key over an insecure public channel. This established key can be used to symmetric-key algorithms for future communication. Since symmetric key algorithms are more efficient than asymmetric keys algorithms, the DH key exchange method is very useful.
 
 \hypertarget{cross}{%
 \chapter{Cross-references}\label{cross}}
@@ -315,8 +332,8 @@ temperature & pressure\\
 \end{tabular}
 \end{table}
 
-\hypertarget{parts}{%
-\chapter{Parts}\label{parts}}
+\hypertarget{basic-observations}{%
+\chapter{Basic Observations}\label{basic-observations}}
 
 You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
 
@@ -344,39 +361,18 @@ Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YA
 
 The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
 
-\hypertarget{blocks}{%
-\chapter{Blocks}\label{blocks}}
-
 \hypertarget{equations}{%
-\section{Equations}\label{equations}}
+\chapter{equations}\label{equations}}
 
-here is
-Here is an equation.
+hi
+\[\alpha=\frac{k}{k-1}\left( 1-\frac{\sum_{i=1}^kv_x}{v_y}\right)\]
 
-\begin{equation} 
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  \label{eq:binom}
-\end{equation}
+seem
 
-You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
-
-\hypertarget{theorems-and-proofs}{%
-\section{Theorems and proofs}\label{theorems-and-proofs}}
-
-Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
-
-\begin{theorem}
-\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
-and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
-\[a^2 + b^2 = c^2\]
-\end{theorem}
-
-Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
-
-\hypertarget{callout-blocks}{%
-\section{Callout blocks}\label{callout-blocks}}
-
-The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
+\begin{tabular}{ll}
+A & B \\
+A & B \\
+\end{tabular}
 
 \hypertarget{sharing-your-book}{%
 \chapter{Sharing your book}\label{sharing-your-book}}
@@ -421,7 +417,7 @@ How ever i am very sorry about it. So Please forgive me.
 \begin{figure}
 \centering
 \includegraphics{https://media.tenor.com/WpxADIRXxB4AAAAC/secret-life-of-pets-snowball.gif}
-\caption{covid-19 image}
+\caption{I am very sorry}
 \end{figure}
 
   \bibliography{book.bib,packages.bib}

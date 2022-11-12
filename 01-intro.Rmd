@@ -1,11 +1,7 @@
-# Hi little BUnny
-why is ithis lkjlk lkjj
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
+# Deffie-Helman Algorithm (Diffe-Helamn Key Distribution Algorithm)
+The Diffie-Helamn (DH) Algorithm is a key exchange protocol. It is a method of securely exchanging cryptographic keys over a public channel. The DH algorithm enable two parties that have no prior knowledge of each other to jointly establish a shared secret key over an insecure public channel. This established key can be used to symmetric-key algorithms for future communication. Since symmetric key algorithms are more efficient than asymmetric keys algorithms, the DH key exchange method is very useful.
 
-## A section
 
-All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
 
-### An unnumbered section {-}
 
-Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+
